@@ -10,29 +10,6 @@ module.exports = merge(common, {
       test: /\.ts(x?)$/,
       loader: 'ts-loader',
       exclude: /node_modules/
-    }, {
-      test: /\.(png|jpg|gif)$/,
-      use: [{
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-          outputPath: 'public/',
-          useRelativePaths: true
-        }
-      }]
-    },
-    {
-      test: /\.scss$/,
-      use: [{
-        loader: 'style-loader'
-      }, {
-        loader: 'css-loader',
-        options: {
-          modules: true
-        }
-      }, {
-        loader: 'sass-loader',
-      }]
     }],
   },
   plugins: [
