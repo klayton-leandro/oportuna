@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 
 import * as Styles from "./styles"
 
-import { questions, exercises } from '@/screen/Question/mock'
+import { questions } from '@/screen/Question/mock'
+
+import { useHistory } from "react-router-dom"
 
 
 
 const Question = () => {
-    const countExercise = useState(exercises.length)
-    
-    const [ExerciseSelected, setExerciseSelected] =  useState(false)
-
-    console.log(`ExerciseSelected`, ExerciseSelected)
-
-    const HandleExercise = (exerciseId, ) => {
-        setExerciseSelected(true)
+    const history = useHistory()
+    const HandleExercise = (exercise, content) => {
+        history.push(`/exercise/${exercise}`, {
+            content: content,
+            
+        })
     }
+
     return (
         <Styles.Wrapper>
             {questions.map(questions => {
@@ -28,10 +29,10 @@ const Question = () => {
                         <Styles.CardQuestionSubTitle>{questions.h2}</Styles.CardQuestionSubTitle>
                     </Styles.CardQuestion>
 
-                    {questions.exercises.map(exercise => {
+                    {questions.exercises.map((exercise) => {
                         return (
                             <React.Fragment key={exercise.exercise}>
-                                <Styles.ButtonExercise className="button-exercise" onClick={() => HandleExercise(exercise)}>
+                                <Styles.ButtonExercise className="button-exercise"  onClick={() => HandleExercise(exercise.exercise, exercise.content)}>
                                     {exercise.exercise}
                                 </Styles.ButtonExercise>
                             </React.Fragment>
@@ -41,8 +42,7 @@ const Question = () => {
                     
                     </React.Fragment>
                 )
-            })}    
-        
+            })} 
         </Styles.Wrapper>
     )
 }

@@ -3,6 +3,11 @@ import styled from "styled-components"
 import { colors } from "@/styles/colors";
 
 
+type PropsButtonSelected=  {
+    buttonSelected?: boolean 
+}
+
+
 export const Wrapper = styled.div`
     width:  80%;
     height: 50%;
@@ -27,13 +32,13 @@ export const CardQuestionSubTitle = styled.small`
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 `;
 
-export const ButtonExercise = styled.button`
+export const ButtonExercise = styled.button<PropsButtonSelected>`
     width:300px;
     text-align: center ;
     padding: 20px;
     margin-left:  4%;
     margin-bottom: 20px;
-    background-color: ${colors.primary};
+    background-color: ${props => props.buttonSelected ? 'white': colors.primary };
     border-color: ${colors.secondary};
     border-radius: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;

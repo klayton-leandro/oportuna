@@ -1,23 +1,12 @@
 export const exercises = [
     {
         exercise: "Exercicio 1",
-        content: `
-            (SUPER ENSINO) Analise as afirmativas  a seguir:
-            \b
-            1 - Queria saber o por que dessa confusao.
-            \b
-            2 - Queria Saber porque voce faltou aula.
-            \b
-            3 - Acordo cedo porque gosto de estudar
-            \b 
-            Com relacao ao uso dos porques estao corretas:
-            \b
-        `,
+        content: "foo bar foo bar foo bar foo bar foo bar foo bar \r\n foo bar foo bar foo bar foo bar foo bar foo bar",
     },
     {
         exercise: "Exercicio 2",
         content: `
-            (SUPER ENSINO) Analise as afirmativas  a seguir:
+            (SUPER ENSINO 2) Analise as afirmativas  a seguir:
             \b
             1 - Queria saber o por que dessa confusao.
             \b
@@ -32,7 +21,7 @@ export const exercises = [
     {
         exercise: "Exercicio 3",
         content: `
-            (SUPER ENSINO) Analise as afirmativas  a seguir:
+            (SUPER ENSINO 3) Analise as afirmativas  a seguir:
             \b
             1 - Queria saber o por que dessa confusao.
             \b
@@ -47,7 +36,7 @@ export const exercises = [
     {
         exercise: "Exercicio 4",
         content: `
-            (SUPER ENSINO) Analise as afirmativas  a seguir:
+            (SUPER ENSINO 4) Analise as afirmativas  a seguir:
             \b
             1 - Queria saber o por que dessa confusao.
             \b
@@ -62,22 +51,22 @@ export const exercises = [
     {
         exercise: "Exercicio 5",
         content: `
-            (SUPER ENSINO) Analise as afirmativas  a seguir:
-            \b
+            (SUPER ENSINO 5) Analise as afirmativas  a seguir:
+            \n
             1 - Queria saber o por que dessa confusao.
-            \b
+            \n
             2 - Queria Saber porque voce faltou aula.
-            \b
+            \n
             3 - Acordo cedo porque gosto de estudar
-            \b 
+            \n 
             Com relacao ao uso dos porques estao corretas:
-            \b
+            \n
         `,
     },
     {
         exercise: "Exercicio 6",
         content: `
-            (SUPER ENSINO) Analise as afirmativas  a seguir:
+            (SUPER ENSINO 6) Analise as afirmativas  a seguir:
             \b
             1 - Queria saber o por que dessa confusao.
             \b
